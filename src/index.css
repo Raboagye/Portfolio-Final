@@ -1,0 +1,114 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@import url('db.onlinewebfonts.com/c/cb8d4d30de89efdc96a98761ede26d3d?family=Mongolian+Baiti');
+
+
+@layer base {
+  a {
+    font-size: calc(0.6rem + 0.32vw);
+    padding: 0;
+  }
+
+  /* h1 {
+    font-size: calc(0.5rem + 1.5vw);
+  } */
+
+  /* p {
+    font-size: calc(0.6rem + 0.5vw)
+  } */
+}
+
+
+@layer components{
+  .inner-shadow {
+    box-shadow: inset 8px 20px 5px 0px rgba(0, 0, 0, 1);
+  }
+  .inner-shadows {
+    box-shadow: inset 8px 17px 5px 0px rgba(0, 0, 0, 1);
+  }
+  .dark-shadow {
+    box-shadow: inset 8px 10px 5px 0px #374151;
+  }
+  .box-inner-shadow {
+    box-shadow: inset -8px 18px 8px 0px #000000;
+  }
+  .contact-inner-shadow {
+    box-shadow: inset 16px 26px 4px 0px rgba(137, 133, 133, 0.25);
+  }
+  .button-inner-shadow {
+    box-shadow: inset 8px clamp(20px, 1.9vw, 25px) 4px 0px rgba(0, 0, 0, 1);
+  }
+  .download-inner-shadow {
+    box-shadow: inset 8px 34px 4px 0px rgba(0, 0, 0, 1);
+  }
+  .origin-center-left{
+    transform-origin: center left;
+  }
+  
+  .moveAnimate {
+    animation: rotate 20s infinite linear;
+  }
+  .box-shadow {
+    box-shadow: 0 0 1vw 0.3vw rgb(188, 251, 220);
+  }
+  .little-box-shadow {
+    box-shadow: 0 0 1vw 0.01vw rgb(188, 251, 220);
+  }
+  
+  
+  @keyframes rotate {
+    from {
+      transform: rotateX(0deg) rotateY(0deg)
+    }
+    to {
+      transform: rotateX(360deg) rotateY(360deg);
+    }
+  }
+
+  @keyframes growAndFadeInFontSize {
+    0% {
+      font-size: 0;
+      opacity: 0;
+    }
+    100% {
+      font-size: 1em;
+      opacity: 1;
+    }
+  }
+  .details6[open] {
+    animation-name: growAndFadeInFontSize;
+    animation-duration: 500ms;
+  }
+  
+  
+}
+
+.fontSize {
+  font-size: calc(0.3rem + 0.7vw)
+}
+
+.fontSize2 {
+  font-size: calc(0.3rem + 0.9vw)
+}
+
+@layer utilities {
+  .mt-39{
+    margin-top: 136px;
+  }
+}
+
+.profileMenu {
+  @apply mid:hidden w-[250px] h-[calc(100vh-58px)] max-h-[690px] transform z-[999] shadow-gray-950 shadow-md fixed top-[58px] box-border transition-transform ease-in-out duration-1000 ; 
+}
+
+*{
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+}
+
+
+
